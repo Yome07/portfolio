@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/technology-icons.css">
+  <script type="text/javascript">
+    function AfficheAge() {
+      var date_day = new Date();
+      jour_day = date_day.getDate();
+      mois_day = date_day.getMonth() + 1;
+      annee_day = date_day.getFullYear();
+
+      //calcul de l'âge
+      var ans;
+      ((mois_day > 5) || ((mois_day == 5) && (jour_day >= 24))) ? ans = annee_day - 1976 : ans = (annee_day - 1976) - 1;
+      document.getElementById('age').innerHTML += ans + ' ans ';
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/3cad3f921f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo_ga.png" alt="" width="50" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#presentation">Qui suis-je ?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#competences">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#parcours">Parcours professionnel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formations">Formations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#realisations">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="presentation" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Qui suis-je ?</h1>
+      <div class="d-flex flex-wrap flex-sm-nowrap align-items-start justify-content-center">
+        <div class="card mb-2 me-2 flex-grow-0 flex-shrink-0">
+          <img src="images/moi.png" class="card-img-top" alt="">
+          <div class="card-body">
+            <h2 class="card-title text-center">Guillaume Andreux</h2>
+            <p id="age" class="card-text text-center">
+              <script type="text/javascript">AfficheAge();</script>
+            </p>
+          </div>
+        </div>
+        <p class="textPresentation">
+          <img class="d-none d-md-inline float-md-end ms-2" src="images/webresponsive-reflet-small.png" alt="" width="150">
+          Web, journalisme, photo, audiovisuel et multimédia, voilà les domaines que j'aime et qui m'ont amené à vouloir
+          en faire un métier.
+          <br>
+          Dans ce site CV, retrouvez mes différentes <a href="#formations">formations</a> et <a href="#competences">compétences</a>. Vous trouverez aussi mon <a href="#parcours">parcours</a> et les
+          différentes <a href="#realisations">réalisations</a> web que j'ai pu faire.
+          <br>
+          Je suis actuellement en formation de Concepteur développeur d'applications à l'Afpa de Paris, pour y acquérir les
+          différentes compétences du développeur permettant de réaliser un site web.
+          <br>
+          Je suis à la recherche d'un emploi de développeur me permettant de mettre en application toutes ces compétences
+          acquises et en voies d'acquisition.
+          <br>
+          Gardez une trace de cette visite et téléchargez <a href="#">mon CV au format pdf</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="competences" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Compétences professionnelles</h1>
+      <div class="row d-flex flex-wrap gx-3">
+        <div class="col col-12 col-md-6">
+          <h2>Compétences techniques</h2>
+          <ul class="d-flex flex-wrap bgOrange roundedSkill">
+            <li><i class="icon-html5"></i> HTML5</li>
+            <li><i class="icon-css3"></i> CSS3</li>
+            <li><i class="icon-php"></i> PHP</li>
+            <li><i class="icon-mysql"></i> MySQL</li>
+            <li><i class="icon-js"></i> Javascript</li>
+            <li> <i class="icon-wordpress"></i> Wordpress</li>
+            <li><img src="images/lodel_couleur.png" alt=""> Lodel</li>
+            <li><i class="icon-bootstrap"></i> Bootstrap</li>
+          </ul>
+        </div>
+        <div class="col col-12 col-md-6">
+          <h2>Outils</h2>
+          <ul class="d-flex flex-wrap bgOrange roundedSkill">
+            <li><i class="icon-photoshop"></i></i> Photoshop</li>
+            <li><i class="fa-brands fa-figma"></i> Figma</li>
+            <li><i class="fa-brands fa-linux"></i> Linux</li>
+            <li><i class="icon-git"></i> Git</li>
+          </ul>
+        </div>
+        <div class="col col-12 col-md-6">
+          <h2>Langues</h2>
+          <ul class="d-flex flex-wrap bgOrange roundedSkill">
+            <li>Français (langue maternelle)</li>
+            <li>Anglais (lu, parlé, écrit)</li>
+            <li>Espagnol (notions)</li>
+            <li>Allemand (notions)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="parcours" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Parcours professionnel</h1>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgBlue bgWhite roundedDate">
+        <p>2016 - 2021</p>
+        <div>
+          <img class="float-end" src="images/logo_openedition.png" alt="">
+          <h2>Chargé de projets web</h2>
+          <p>OpenEdition, CNRS - Marseille</p>
+          <ul>
+            <li>Refonte du front-end des plateformes: OpenEdition Books,       Search, Calenda, OpenEdition Journals
+          </li>
+          <li>Intégration des nouveaux sites sur revues.org: Mise à jour des templates Lodelscript, Adaptation des feuilles de styles CSS, Gestion du Modèle Éditorial sur le logiciel Lodel
+        </li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgBlue bgWhite roundedDate">
+        <p>2014 - 2016</p>
+        <div>
+          <img class="float-end" src="images/logo-ancrages-header.png" alt="">
+          <h2>Webmaster animateur</h2>
+          <p>Association Ancrages - Marseille</p>
+          <ul>
+            <li>Gestion du site internet : Gestion du CMS Wordpress, Modification du thème, gestion des plugins, mises à
+              niveau</li>
+            <li>Animation : Animation du site, agenda, gestion des réseaux sociaux, envoi de newsletter
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgBlue bgWhite roundedDate">
+        <p>2013</p>
+        <div>
+          <img class="float-end" src="images/banG_old.png" alt="">
+          <h2>Formateur informatique</h2>
+          <p>Mon Jardin Numérique - Marseille</p>
+          <ul>
+            <li>Cours d'informatique pour public sénior : Initiation et Bases, Suite bureautique Open Office, Picasa,
+              Windows 8 et Mac OS, Navigation web</li>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgBlue bgWhite roundedDate">
+        <p>2012</p>
+        <div>
+          <img class="float-end" src="images/logoAljepa.png" alt="">
+          <h2>Animateur multimédia</h2>
+          <p>Association pour le Logement des Jeunes en Pays d’Aix - Aix-en-Provence</p>
+          <ul>
+            <li>Multimédia : Refonte du site web sous CMS Joomla, Création de documents de communication, Rédaction et
+              publication du journal interne</li>
+            <li>Animation : Gestion de la salle multimédia, Aide à l'utilisation du matériel informatique, aide à la
+              création de CV, participation à la vie du foyer</li>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgBlue bgWhite roundedDate">
+        <p>2008 - 2010</p>
+        <div>
+          <img class="float-end" src="images/CollègeArthurRimbaudMarseille.png" alt="">
+          <h2>Assistant pédagogique en informatique</h2>
+          <p>Collège Arthur Rimbaud - Marseille</p>
+          <ul>
+            <li>Multimédia : Mise à jour du site web, Réalisation d'un film promotionnel du collège, Montage sous Final
+              Cut, Création de documents de communication, plaquettes, affiches, etc.</li>
+            <li>Informatique : Gestion de la salle informatique du collège, Assistance aux élèves et professeurs dans
+              l'utilisation du matériel informatique et multimédia, Animation du club informatique</li>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="formations" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Formations</h1>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgOrange bgWhite roundedDate">
+        <p>2016</p>
+        <div>
+          <img class="float-end" src="images/logo_cnam_blanc_transp.png" alt="">
+          <h2>Certificat professionnel programmation de sites web</h2>
+          <p>CNAM - Aix-en-Provence</p>
+          <ul>
+            <li>Graphisme : Gestion des images, Ergonomie, Charte graphique, Gimp, Inkscape</li>
+            <li>Intégration : HTML5 et CSS3, Bootstrap</li>
+            <li>Administration web : Linux, Introduction aux réseaux, Gestion serveur Apache</li>
+            <li>Base de données : Modèles conceptuel et relationnel, Algèbre relationnelle, Langage SQL</li>
+            <li>Développement : Algorithmique, PHP procédural et POO, Framework MVC, Cookies, Sessions, Formulaires et sécurité</li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgOrange bgWhite roundedDate">
+        <p>2007</p>
+        <div>
+          <img class="float-end" src="images/logoRennes2.png" alt="">
+          <h2>Licence professionnelle Convergence Internet et Audiovisuel Numérique</h2>
+          <p>Université Rennes 2</p>
+          <ul>
+            <li>Internet: HTML et CSS, Initiation à Flash, Javascript, Création de 2 sites</li>
+            <li>Multimédia : Image, son, vidéo numériques, Analyse cinéma, Conduite de projet, Réalisation vidéo</li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgOrange bgWhite roundedDate">
+        <p>2003</p>
+        <div>
+          <img class="float-end" src="images/logo-udem.png" alt="">
+          <h2>Certificat en Journalisme</h2>
+          <p>Université de Montréal</p>
+          <ul>
+            <li>Méthodes journalistiques</li>
+            <li>Presse radio</li>
+            <li>Presse télévisée</li>
+            <li>Journalisme et internet</li>
+          </ul>
+        </div>
+      </article>
+      <article class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-start bgOrange bgWhite roundedDate">
+        <p>1999</p>
+        <div>
+          <img class="float-end" src="images/uni_ujf.jpg" alt="">
+          <h2>DEUG Mathématiques, Informatique Appliquées aux Sciences</h2>
+          <p>Université Grenoble 1</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="realisations" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Réalisations</h1>
+      <div class="d-flex flex-wrap justify-content-center justify-content-md-between">
+        <div class="card mb-2">
+          <img src="images/aljepa.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">ALJEPA</h2>
+            <p class="card-text">Foyer de jeunes travailleurs d'Aix-en-Provence</p>
+            <p class="card-text">Site réalisé sous le CMS Joomla à partir d'un template</p>
+            <a href="https://web.archive.org/web/20130518153751/http://www.aljepa.fr/" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/cylindre_sonore.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Le cylindre sonore</h2>
+            <p class="card-text">Une œuvre de Bernhard Leitner</p>
+            <p class="card-text">Site réalisé en Flash lors de la Licence pro.</p>
+            <a href="#" target="_blank" class="btn btn-primary disabled mt-auto">Ce site n'est plus en ligne</a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/groupe_frequence.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Groupe Fréquence</h2>
+            <p class="card-text">Entreprise de services à domicile</p>
+            <p class="card-text">Intégration du site vitrine d'une entreprise sous Dreamweaver à partir de maquette Photoshop. HTML - CSS</p>
+            <a href="#" target="_blank" class="btn btn-primary disabled mt-auto">Ce site n'est plus en ligne</a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/land_and_freedom.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Land and Freedom</h2>
+            <p class="card-text">Un film de Ken Loach</p>
+            <p class="card-text">Site réalisé lors de la Licence pro. HTML - CSS</p>
+            <a href="#" target="_blank" class="btn btn-primary disabled mt-auto">Ce site n'est plus en ligne</a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/transit.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Transit Librairie</h2>
+            <p class="card-text">Site réalisé sous CMS Wordpress, création du thème.</p>
+            <a href="https://web.archive.org/web/20141218095606/http://transit-librairie.org/" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/promenades.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Les promenades sonores</h2>
+            <p class="card-text">un site de Radio Grenouille</p>
+            <p class="card-text">Intégration de la page d'accueil à partir d'une maquette Photoshop. HTML5 - CSS3 - Javascript / Jquery - Site responsive</p>
+            <a href="https://web.archive.org/web/20140528101625/http://www.promenades-sonores.com/" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/radiolab.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Radiolab</h2>
+            <p class="card-text">un site de Radio Grenouille</p>
+            <p class="card-text">Développement d'une rubrique de ce site sous le CMS Wordpress - Php.</p>
+            <a href="https://web.archive.org/web/20141003183011/http://radiolab.fr/" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/ancrages300x200.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">Ancrages</h2>
+            <p class="card-text">Mises à jour du site, du CMS Wordpress, du template, des plugins. Modification des feuilles de style.</p>
+            <a href="https://web.archive.org/web/20160610155021/http://ancrages.org/" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <img src="images/OpenEditionSearch.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column flex-nowrap">
+            <h2 class="card-title">OpenEdition Search</h2>
+            <p class="card-text">Moteur de recherche de la plateforme openedition.org</p>
+            <p class="card-text">chargé de projet de la refonte du site, réalisation du cahier des charges et des wireframes. Site en React JS réalisé par un prestataire.</p>
+            <a href="https://search.openedition.org" target="_blank" class="btn btn-primary mt-auto">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="d-flex py-2">
+    <div class="container">
+      <h1 class="border-bottom border-white border-2 pb-2">Contact</h1>
+      <form>
+        <div class="form-group mb-3">
+          <label for="nom" class="form-label">Votre nom *</label>
+          <input type="text" class="form-control" id="nom" placeholder="Jean Martin" required>
+        </div>
+        <div class="form-grou mb-3">
+          <label for="email" class="form-label">Votre courriel *</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="message" class="form-label">Votre message *</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+      </form>
+      <h2 class="text-center  m-3">Suivez-moi !</h2>
+      <p class="text-center  m-3">
+        <a href="#" class="link-light"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a href="#" class="link-light"><i class="fa-brands fa-twitter fa-xl"></i></a>
+        <a href="#" class="link-light"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a href="#" class="link-light"><i class="fa-brands fa-github fa-xl"></i></a>
+      </p>
+      <p class="text-center m-3"> Télécharger mon CV au format pdf : <a href="images/CV_concepteur_rédacteur_web.pdf" class="link-light">cv.pdf <i class="fa-solid fa-file-pdf"></i></a></p>
+    </div>
+  </section>
+  <footer class="text-center">
+    Guillaume Andreux | © 2022 | Tous droits réservés | <a href="#">Mentions légales</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
